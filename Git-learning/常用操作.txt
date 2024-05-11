@@ -1,0 +1,12 @@
+git init <project-name>		本地创建新仓库
+git clone <url>			下载远程仓库
+git add				将工作区的文件与git仓库做一个关联
+git commit -m "message"		将已关联的文件全部提交到仓库中，并创建为新结点
+git branch <branch_name>		创建为新分支
+	-d <branch_name>		删除分支，已合并是前提
+	-D			删除分支
+git switch <branch-name>		切换到某一分支的最新结点
+git merge --no--ff -m "message"	合并并创建新结点，--ff类似于rebase
+git rebase <branch-name>		将当前分支嫁接合并到<branch-name>后边
+git push				将本地当前结点推到远程仓库上
+git pull				相反
