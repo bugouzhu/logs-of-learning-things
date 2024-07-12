@@ -1,12 +1,30 @@
 git init <project-name>		本地创建新仓库
 git clone <url>			下载远程仓库
-git add				将工作区的文件与git仓库做一个关联
+git add				将文件夹下的文件与git仓库做一个关联。
+
+add后才是工作区内！！！！！！	没add过的永远不参与后续操作！！！！！！
+
 git commit -m "message"		将已关联的文件全部提交到仓库中，并创建为新结点
-git branch <branch_name>		创建为新分支
-	-d <branch_name>		删除分支，已合并是前提
+
+git reset --hard		将工作区，暂存区，仓库全部回退到某个节点
+	  --mixed		保留工作区
+	  --soft		保留工作区和暂存区
+
+git branch <branch_name>	创建为新分支
+	-d <branch_name>	删除分支，已合并是前提
 	-D			删除分支
-git switch <branch-name>		切换到某一分支的最新结点
+git switch <branch-name>	切换到某一分支的最新结点
 git merge --no--ff -m "message"	合并并创建新结点，--ff类似于rebase
-git rebase <branch-name>		将当前分支嫁接合并到<branch-name>后边
-git push				将本地当前结点推到远程仓库上
-git pull				相反
+git rebase <branch-name>	将当前分支嫁接合并到<branch-name>后边
+git push			将本地当前结点推到远程仓库上
+git pull			相反
+
+HEAD表示最新提交
+HEAD~表示上一个结点
+HEAD~n表示HEAD之前n个结点
+
+git diff			默认对比工作区和暂存区
+git diff HEAD			工作区和最新提交的区别
+git diff --cached		暂存区和最新提交
+git diff 版本 版本		对比两个版本
+git diff 分支 分支		
