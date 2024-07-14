@@ -3,3 +3,5 @@
 
 关于.ssh
 需要手动设置，具体位置为"C:\Users\acer\.ssh\config"
+确保known_hosts文件正常，可执行下面文件
+ssh-keyscan github.com >> ~/.ssh/known_hosts
